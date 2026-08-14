@@ -197,4 +197,28 @@ namespace Jans {
 }
 
 namespace Merchant {
+  entity Campaign = {
+    tenant: Tenant
+  };
+
+  entity Conversation = {
+    status: __cedar::String,
+    tenant: Tenant
+  };
+
+  entity Order = {
+    tenant: Tenant,
+    total_idr: __cedar::Long
+  };
+
+  entity Staff = {
+    role: Set<String>,
+    sub: __cedar::String,
+    tenant: Tenant
+  };
+
+  entity Tenant = {
+    plan: __cedar::String,
+    tenant_id: __cedar::String
+  };
 }
