@@ -221,4 +221,34 @@ namespace Merchant {
     plan: __cedar::String,
     tenant_id: __cedar::String
   };
+
+  action "RefundOrder" appliesTo {
+    principal: [Staff],
+    resource: [Order],
+    context: {}
+  };
+
+  action "ReplyConversation" appliesTo {
+    principal: [Staff],
+    resource: [Conversation],
+    context: {}
+  };
+
+  action "SendBroadcast" appliesTo {
+    principal: [Staff],
+    resource: [Campaign],
+    context: {}
+  };
+
+  action "ViewConversation" appliesTo {
+    principal: [Staff],
+    resource: [Conversation],
+    context: {}
+  };
+
+  action "ViewOrder" appliesTo {
+    principal: [Staff],
+    resource: [Order],
+    context: {}
+  };
 }
